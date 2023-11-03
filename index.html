@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="viewport" content="width=1024"> -->
+    <title>Martin Cuingnet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+    <header id="header">
+        <div class="logo-div">
+            <img src="logo.png" alt="Logo" class="logo">
+        </div>
+        <nav>
+            <!-- <div class="container"> -->
+                <h1>mcngnt</h1>
+                <ul>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="projects.html">Projets</a></li>
+                    <li><a href="exp.html">Expériences</a></li>
+                    <!-- <li><a href="#active-tab" onclick="openTab('projects.html')">Projets</a></li>
+                    <li><a href="#active-tab" onclick="openTab('exp.html')">Expériences</a></li> -->
+                    <!-- <li><a href="#contact">Contact</a></li> -->
+                </ul>
+            <!-- </div> -->
+        </nav>
+    </header>
+
+    <section id="hero">
+
+
+        <div id="hero-text">
+            <h2>
+                <span class="salutation">Salut ! Je suis</span>
+                <!-- <br> -->
+                <span class="name">Martin<br>Cuingnet</span>
+                <br>
+                <span class="salutation">Elève de l'ENS Paris-Saclay <br> en informatique</span>
+            </h2>
+        </div>
+
+        <iframe id="heroframe" src="raymarch.html" scrolling="no" frameBorder="0"></iframe> 
+
+        <!-- <div class="background"></div> -->
+    </section>
+
+    <section id="about">
+        <iframe id="about-frame" src="about.html" onload="iframeLoaded('about-frame')" scrolling="no"></iframe>
+    </section>
+    
+    <section id="tab">
+
+    <section id="tab-select">
+    <button class="tab-link" id="projects-tab-link" onclick="clickTab('projects.html')">Projets</button>
+    <button class="tab-link" id="exp-tab-link" onclick="clickTab('exp.html')">Expérience</button>
+    </section>
+
+    <section id = "active-tab">
+        <iframe id="tab-frame" src="projects.html" onload="iframeLoaded('tab-frame')" scrolling="no"></iframe>
+        <br>
+    </section>
+
+
+    </section>
+
+    <!-- <section id="projects">
+        <iframe id="projectframe" src="projects.html" onload="iframeLoaded()" scrolling="no"></iframe> 
+    </section>
+
+    <section id="exp">
+        <iframe id="expframe" src="exp.html" onload="iframeLoaded()" scrolling="no"></iframe> 
+    </section> -->
+
+    <section id="contact">
+        <!-- <div class="container"> -->
+            <h2>Contact</h2>
+            <p>Vous pouvez me joindre à l'adresse suivante : martin.cuingnet[at]icloud.com</p>
+        <!-- </div> -->
+    </section>
+
+    <script>
+        let prevScrollPos = window.pageYOffset;
+        const heroFrame = document.getElementById("heroframe");
+        const heroSection = document.getElementById("hero");
+        const heroHeight = heroSection.clientHeight;
+        const header = document.getElementById("header");
+
+        const heroSrc = "raymarch.html";
+
+        window.onscroll = function() {
+            const currentScrollPos = window.pageYOffset;
+            if ((currentScrollPos > heroHeight/2))
+            {
+                header.classList.add("sticky");
+            }
+            else
+            {
+                setTimeout(() => {
+                    header.classList.remove("sticky");
+                }, 20);
+            }
+
+            if(currentScrollPos > heroHeight * 1.2)
+            {
+                heroFrame.src = ""
+            }
+            else
+            {
+                if (prevScrollPos > heroHeight * 1.2)
+                {
+                    heroFrame.src = heroSrc;
+                }
+            }
+
+            prevScrollPos = currentScrollPos;
+        };
+    </script>
+    <script type="text/javascript">
+  let usingProject = true;
+  function iframeLoaded(idframe) {
+      var iFrameID = document.getElementById(idframe);
+      if(iFrameID) {
+            var multFact = 1.2;
+            // if (idframe == 'tab-frame' && usingProject)
+            // {
+            //     multFact = 2.0;
+            // }
+            // if (idframe == 'about-frame')
+            // {
+            //     multFact = 1.2;
+            // }
+            iFrameID.height = "";
+            iFrameID.height = (iFrameID.contentWindow.document.body.scrollHeight * multFact) + "px";
+            // iFrameID.width = "";
+            // iFrameID.width = (iFrameID.contentWindow.document.body.scrollWidth * 1.2) + "px";
+      }   
+  }
+</script>   
+   <!--  <script type="text/javascript">
+        const heroFrameID = document.getElementById('heroframe');
+
+        document.onmousemove = function(e){
+            heroFrameID.contentWindow.changeMouseValue(e.pageX, e.pageY);
+        }
+
+    </script> -->
+
+    <script>
+        const tabFrame = document.getElementById('tab-frame');
+        function openTab(nsrc) 
+        {
+            usingProject = (nsrc == 'projects.html');
+            tabFrame.src = nsrc;
+            iframeLoaded('tab-frame');
+        }
+
+        function openLink(nsrc)
+        {
+            window.open(nsrc, "_self");
+        }
+
+        if(navigator.maxTouchPoints > 0)
+        {
+            document.getElementById("active-tab").hidden = true;
+        }
+
+
+        function clickTab(nsrc)
+        {
+            if(navigator.maxTouchPoints > 0)
+            {
+                openLink(nsrc);
+            }
+            else
+            {
+                openTab(nsrc);
+            }
+        }
+    </script>
+</body>
+</html>

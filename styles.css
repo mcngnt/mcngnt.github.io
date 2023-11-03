@@ -1,0 +1,565 @@
+header {
+/*    background-color: #001f2e;*/
+    background-color: rgba(0, 31, 46, 0.80); 
+    backdrop-filter: blur(10px); /* Add the blur effect to the header */
+    color: #fff;
+    padding: 1vh 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    transition: top 0.2s ease-in; /* Added transition property */
+
+    display: flex; /* Use flexbox to create a horizontal layout */
+/*    justify-content: space-between; /* Align logo and menu to the ends */*/
+    align-items: center; /* Center items vertically */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+/*    position:absolute;*/
+overflow-x: auto;
+}
+
+.logo {
+
+    object-fit: contain;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.logo-div {
+    margin-left: 1vh;
+    margin-right: 1vh;
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+
+nav {
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 7px;
+    display: flex; /* Use flexbox to create a horizontal menu */
+    align-items: center; /* Center menu items vertically */
+}
+
+nav ul li {
+    margin-right: 0px; /* Adjust the space between menu items */
+}
+
+nav ul li:first-child {
+    margin-right: auto; /* Push the menu items close to the logo */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Remove the margin from the last menu item */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Add more space between menu items */
+nav ul li:not(:first-child) {
+    margin-left: 3vh;
+}
+
+#hero iframe {
+    z-index : -1;
+    position: absolute;
+    top : 0;
+    left    : 0;
+    bottom: 0;
+    right: 0;
+    width   : 100%;
+    height  : 100%;
+    margin  : 0;
+    padding : 0;
+/*    border: none;*/
+/*    float:right;*/
+    overflow: hidden;
+/*    pointer-events: none*/
+/*    overflow-y: hidden;*/
+}
+
+/* Add a padding to the body to prevent content from being hidden behind the fixed header */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    width: 100%;
+}
+
+
+
+
+/* Sticky header styles */
+.sticky {
+    top: -130px; /* Change this value to hide the header completely when scrolling down */
+}
+
+
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+header a {
+  color: #fff; /* Set the link color to a bright shade of blue (#0071cc) */
+  text-decoration: none; /* Remove default underline for unvisited links */
+}
+
+header a:visited {
+  color: #fff; /* Set the link color to the same bright blue for visited links */
+}
+
+header a:hover {
+  text-decoration: underline; /* Add underline on hover (optional) */
+}
+
+header a:active {
+  color: #fff; /* Set the link color to the same bright blue for active/clicked links (optional) */
+}
+
+a {
+  color: #0071cc; /* Set the link color to a bright shade of blue (#0071cc) */
+  text-decoration: none; /* Remove default underline for unvisited links */
+}
+
+a:visited {
+  color: #0071cc; /* Set the link color to the same bright blue for visited links */
+}
+
+a:hover {
+  text-decoration: underline; /* Add underline on hover (optional) */
+}
+
+a:active {
+  color: #0071cc; /* Set the link color to the same bright blue for active/clicked links (optional) */
+}
+
+
+/* Add a padding to the body to prevent content from being hidden behind the fixed header */
+body {
+/*    padding-top: 60px; /* Change this value according to the height of your header */*/
+/*    padding-top: 20vh;*/
+}
+
+img {
+    border-radius: 20px;
+/*border-radius: 50%;*/
+/*    display: block;*/
+}
+
+
+
+#tab-select {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .tab-link {
+    background-color: #333; /* Darker background color */
+    color: #fff; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px; /* Make the buttons rounder */
+    margin: 0 20px; /* Add some spacing between buttons */
+    font-size: 20px; /* Adjust the font size to make the button bigger */
+  }
+  
+  .tab-link:hover {
+    background-color: #555; /* Darker background color on hover */
+  }
+
+#hero {
+/*    background-color: #010F18;*/
+    color: #fff;
+    height: 60vh; /* Set the height to the full viewport height */
+    padding-top: 40vh; /* Adjust this value to control the top padding */
+
+    
+}
+
+#hero-text {
+/*    background-color: #010F18;*/
+    color: #fff;
+    padding-left: 6vh;
+    text-align: left;
+/*    display: flex;*/
+    align-items: top;
+    z-index : 1;
+    pointer-events: none;
+}
+
+#projects h1 {
+    font-size: 7vh;
+}
+
+#projectspage .container {
+    margin: 0;
+    padding: 3vh;
+    padding-top: 1vh;
+}
+
+#exppage .container {
+    margin: 0;
+    padding: 3vh;
+    padding-top: 1vh;
+}
+
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 5vh;
+    padding-top: 30px;
+    color: #fff;
+}
+
+#hero .container {
+    width: 100%; /* Set the container width to full-width */
+    margin: 0;
+}
+
+#hero h2 {
+    margin-bottom: 10px; /* Reduce the vertical margin between the salutation and name */
+}
+
+#hero h2 .salutation {
+    display: block;
+    font-size: 28px; /* Adjust the font size for the "Salut ! Je suis" part */
+    font-weight: normal; /* Add bold style to the salutation */
+    line-height: 1.2; /* Adjust the line height to make the text closer together */
+}
+
+#hero h2 .name {
+    display: block;
+    font-size: 48px; /* Increase the font size for "Martin Cuingnet" */
+    line-height: 1.2; /* Adjust the line height to make the text closer together */
+}
+
+/*#about {
+    color: #fff;
+    background-color: #222;
+    padding: 80px 0;
+}*/
+
+#projectspage {
+    color : #fff;
+    background-color: #1a1a1a;
+    padding: 80px 0;
+    align-content: right;
+}
+
+#projectspage {
+    color : #fff;
+    background-color: #1a1a1a;
+    padding: 80px 0;
+    align-content: right;
+}
+
+#exppage {
+    color : #fff;
+    background-color: #1a1a1a;
+    align-content: right;
+/*    padding: 80px 0;*/
+}
+
+
+iframe {
+    overflow: hidden;
+    display: block;
+    border: none;
+    width: 100%;
+    margin  : 0;
+    padding : 0;
+/*    height: 100%;*/
+}
+
+
+.project img {
+    max-width: 40%;
+}
+
+#contact {
+    background-color: #0c0c0c;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+#contact p {
+    margin: 0;
+}
+
+
+
+.project {
+    display: flex; /* Use flexbox to create a horizontal layout */
+    align-items: center; /* Center items vertically within the project container */
+    margin-bottom: 200px; /* Add some space between projects */
+/*    flex-direction: column*/
+}
+
+.project-image {
+    flex: 1; /* Make the image container occupy one-third of the available space */
+    margin-right: 20px; /* Add some space between the image and the project info */
+}
+
+.project-image img {
+    max-width: 100%;
+    height: auto; /* Maintain the aspect ratio of the image */
+    display: block;
+}
+
+.project span {
+    font-size: 13px;
+    margin-left: auto;
+    margin-bottom: 15px;
+    color: #00c8ff;
+}
+
+.project-info {
+    flex: 2; /* Make the project info container occupy two-thirds of the available space */
+    display: flex; /* Use flexbox to align the project info to the right */
+    flex-direction: column; /* Stack the elements vertically within the project info */
+    justify-content: flex-end;
+}
+
+#projectspage h1 {
+    font-size: 35px;
+}
+
+.project h3 {
+    font-size: 24px;
+    margin-bottom: 0px;
+    margin-left: auto;
+/*    align-items: left;*/
+}
+
+.project p {
+    font-size: 18px;
+    margin: 0;
+    text-align: right;
+}
+
+#exppage h1 {
+    font-size: 35px;
+}
+
+#exppage h3 {
+    font-size: 27px;
+    text-decoration: underline;
+}
+
+#exppage h4 {
+    font-size: 22px;
+}
+
+.category p {
+    font-size: 17px;
+}
+.category li {
+    font-size: 17px;
+}
+
+.category h5 {
+    font-size: 19px;
+}
+
+#tempo {
+    padding-left: 30px;
+}
+
+/*.ltitle {
+    font-size: 10px;
+/*    text-decoration: underline;*/
+    font-weight: bold;
+}
+
+.nobullet {
+     list-style-type: none; /* Remove bullets */
+}
+*/
+
+
+
+#about {
+    color: #fff;
+    background-color: #000;
+    padding: 80px 0;
+    width: 100%;
+    align-content: center;
+    padding-top: 50px;
+    overflow: auto
+
+}
+
+#about-box {
+    display: flex; /* Use flexbox to create a horizontal layout */
+    align-items: center; /* Center items vertically within the project container */
+    width: 100%;
+    gap : 40px;
+/*    overflow-x: auto;*/
+
+}
+
+#about-info {
+    flex: 2; /* Make the project info container occupy two-thirds of the available space */
+    display: flex; /* Use flexbox to align the project info to the right */
+    flex-direction: column; /* Stack the elements vertically within the project info */
+    justify-content: flex-start;
+    margin-right: auto;
+    font-size: 17px;
+}
+
+#about-image {
+    margin-left: auto;
+    flex: 1; /* Make the image container occupy one-third of the available space */
+     margin-right: 5vh;/* Add some space between the image and the project info */
+}
+
+
+#about-image img {
+    max-width: 100%;
+    height: auto; /* Maintain the aspect ratio of the image */
+    display: block;
+}
+
+.timestamp {
+    display: flex; /* Use flexbox to create a horizontal layout */
+    align-items: center; /* Center items vertically within the project container */
+/*    margin-bottom: 15vh; /* Add some space between projects */*/
+/*    margin-left: 5vh;*/
+}
+
+.category {
+    margin-bottom: 3vh;
+}
+
+
+.timestamp span {
+    font-size: 13px;
+/*    margin-bottom: 15px;*/
+    color: #00c8ff;
+    flex: 1; /* Make the project info container occupy two-thirds of the available space */
+    display: flex; /* Use flexbox to align the project info to the right */
+    flex-direction: column; /* Stack the elements vertically within the project info */
+    justify-content: flex-start;
+}
+
+.timestamp p {
+    flex: 7; /* Make the image container occupy one-third of the available space */
+/*    margin-right: 20px; /* Add some space between the image and the project info */*/
+}
+
+
+   table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: Arial, sans-serif;
+      background-color: #333;
+      color: #fff;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #555;
+    }
+
+    th {
+      background-color: #555;
+    }
+
+    tr:hover {
+      background-color: #444;
+    }
+
+
+.project a {
+    align-content: right;
+}
+
+
+.button-zone {
+    display: flex; /* Use flexbox to create a horizontal layout */
+    align-items: center; /* Center items vertically within the project container */
+    justify-content: right;
+}
+
+
+.button-container {
+  text-align: center;
+/*  align-content: center;*/
+  margin-top: 30px;
+}
+
+a.button {
+  display: inline-block;
+  border: none;
+  background: none;
+  padding: 0;
+  transition: opacity 0.3s;
+}
+
+a.button img {
+  width: 100px; /* Adjust the width and height to fit your image dimensions */
+  height: auto;
+  border-radius: 5px;
+  opacity: 1; /* Set the initial opacity for the image */
+}
+
+a.button:hover img {
+  opacity: 0.7; /* Set the opacity when the button is hovered */
+}
+
+.tooltip {
+  display: none;
+  margin-top: 10px;
+  color: #555;
+  font-size: 14px;
+/*  position: absolute;*/
+
+/*  left: 50%;*/
+/*  transform: translate(-50%, 0);*/
+
+  /*left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 100px; /* Need a specific value to work */*/
+}
+
+
+/*.wrapper {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+*/
+
+a.button:hover ~ .tooltip {
+  display: block;
+}

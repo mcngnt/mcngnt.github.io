@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_blank">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.png" type="image/png">
+    <style>
+        *
+        {
+            font-family: Helvetica;
+            color: #DEDEDF;
+        }
+        .editor
+        {
+            margin: 1em;
+            border:solid 1px #ccc;
+            padding: 20px;
+            min-height:200px;
+            font-size: 1.2em;
+            border-radius:10px;
+        }
+        br
+        {
+            font-size: 1.2em;
+        }
+        .sample-toolbar
+        {
+            border:solid 1px #ddd;
+            background:#f4f4f4;
+            padding: 5px;
+            border-radius:3px;
+        }
+        .sample-toolbar > span
+        {
+            cursor:pointer;
+        }
+        .sample-toolbar > span:hover
+        {
+            text-decoration:underline;
+        }
+    </style>
+</head>
+
+
+<div class="editor" id="sampleeditor">
+    </div>
+
+    <script>
+        window.addEventListener('load', function(){
+            document.getElementById('sampleeditor').setAttribute('contenteditable', 'true');
+        });
+
+        function format(command, value) {
+            document.execCommand(command, false, value);
+        }
+
+    </script>
+</body>
+</html>

@@ -563,3 +563,16 @@ a.button:hover img {
 a.button:hover ~ .tooltip {
   display: block;
 }
+
+
+::-webkit-scrollbar {
+  width: 12px; /* You can adjust the width to your preference */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #141414; /* Black color for the scrollbar thumb */
+}
+
+::-webkit-scrollbar-track {
+  background: #262626; /* Background color for the scrollbar track */
+}

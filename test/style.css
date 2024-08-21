@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.side-panel {
+    width: 100px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    transform: translateX(-2em);
+}
+
+.side-panel button {
+    margin-bottom: 10px;
+}
+
+.toggle-panel {
+    width: 40px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: absolute;
+    top: 10%;
+    left: 0; /* Change 'right' to '0' to place the arrow on the left */
+}
+
+.panel-open .side-panel {
+    transform: translateY(0);
+}
+
+.panel-open .toggle-panel {
+    transform: translateX(2em);
+}

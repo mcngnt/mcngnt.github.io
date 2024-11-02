@@ -215,13 +215,19 @@ img {
     font-size: 7vh;
 }
 
-#projectspage .container {
+/*#projectspage .container {
+    margin: 0;
+    padding: 3vh;
+    padding-top: 1vh;
+}*/
+
+#exppage .container {
     margin: 0;
     padding: 3vh;
     padding-top: 1vh;
 }
 
-#exppage .container {
+#aboutpage .container {
     margin: 0;
     padding: 3vh;
     padding-top: 1vh;

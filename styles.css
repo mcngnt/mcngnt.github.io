@@ -229,10 +229,6 @@ img {
 
 
 
-.container {
-    padding-right : 100px
-}
-
 #hero .container {
     width: 100%; /* Set the container width to full-width */
     margin: 0;
@@ -254,6 +250,7 @@ img {
     font-size: 48px;
     line-height: 1.2;
 }
+
 
 /*#about {
     color: #fff;
@@ -428,6 +425,7 @@ iframe {
     justify-content: flex-start;
     margin-right: auto;
     font-size: 17px;
+    color : #fff;
 }
 
 #about-image {

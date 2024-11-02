@@ -248,15 +248,15 @@ img {
 
 #hero h2 .salutation {
     display: block;
-    font-size: 28px; /* Adjust the font size for the "Salut ! Je suis" part */
-    font-weight: normal; /* Add bold style to the salutation */
-    line-height: 1.2; /* Adjust the line height to make the text closer together */
+    font-size: 28px;
+    font-weight: normal; 
+    line-height: 1.2;
 }
 
 #hero h2 .name {
     display: block;
-    font-size: 48px; /* Increase the font size for "Martin Cuingnet" */
-    line-height: 1.2; /* Adjust the line height to make the text closer together */
+    font-size: 48px;
+    line-height: 1.2;
 }
 
 /*#about {

@@ -48,8 +48,8 @@ uniform vec2 mousePos;
 #define EPS 0.01
 #define MAX_STEPS 90
 #define MAX_DIST 10.0
-#define DEFAULT_COL vec3(0, 0.36, 0.54)
-#define DEFAULT_COL_2 vec3(0,0.24,0.36)
+#define DEFAULT_COL vec3(0.2, 0.2, 0.2)
+#define DEFAULT_COL_2 vec3(0.1,0.1,0.1)
 #define LIGHT_DIR vec3(0.0,1.0,0.0)
 
 #define LIGHT_POS vec3 (10.0, -10.0, 0.0)
@@ -223,7 +223,7 @@ vec3 march(vec3 eye, vec3 marchDir, vec2 fragCoord)
           colFromLight += vec3(0.5,0.5,0.5) * backlight_specular_intensity;            
           colFromLight += vec3(0.1, 0.1, 0.1) * fresnel_intensity;
           colFromLight -= vec3(1.0, 1.0, 1.0) * fresnel_shadowing ;
-          colFromLight += vec3(.2, 0.2, 0.3) - attenuation ; 
+          colFromLight += vec3(.3, 0.3, 0.3) - attenuation ; 
           colFromLight /= 1.2;
 
           // c *= 0.5 + dot(n , LIGHT_DIR) * 0.5;

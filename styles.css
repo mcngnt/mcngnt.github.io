@@ -1,6 +1,6 @@
 header {
 /*    background-color: #001f2e;*/
-    background-color: rgba(0, 31, 46, 0.80); 
+    background-color: rgba(15, 15, 15, 0.80); 
     backdrop-filter: blur(10px); /* Add the blur effect to the header */
     color: #fff;
     padding: 1vh 0;
